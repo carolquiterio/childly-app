@@ -8,7 +8,7 @@
 import Foundation
 import SwiftUI
 
-struct Student {
+struct Student: Identifiable {
     var id: UUID = UUID()
     var name: String
     var responsible: [String]
@@ -28,6 +28,14 @@ struct Student {
     var studentClass: UUID
 }
 
+class StudentList: ObservableObject {
+    @Published var studentList: [Student]
+    
+    init(studentList: [Student]) {
+        self.studentList = studentList
+    }
+}
+
 struct Class {
     var id: UUID = UUID()
     var className: String
@@ -35,6 +43,14 @@ struct Class {
     var students: [UUID]
     var shift: String
     var activityDiary: [Date: Diary]
+}
+
+class ClassList: ObservableObject {
+    @Published var classList: [Class]
+    
+    init(classList: [Class]) {
+        self.classList = classList
+    }
 }
 
 struct Diary {
@@ -84,11 +100,27 @@ struct Announcement {
     }
 }
 
+class AnnouncementList: ObservableObject {
+    @Published var announcementList: [Announcement]
+    
+    init(announcementList: [Announcement]) {
+        self.announcementList = announcementList
+    }
+}
+
 struct ActivityDiary {
     var date: Date
     var foodMenu: [FoodMenu]
     var activity: [Activity]
     var classID: UUID
+}
+
+class ActivityDiaryList: ObservableObject {
+    @Published var activityList: [ActivityDiary]
+    
+    init(activityList: [ActivityDiary]) {
+        self.activityList = activityList
+    }
 }
 
 struct FoodMenu {
