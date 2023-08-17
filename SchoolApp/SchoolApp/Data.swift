@@ -12,16 +12,16 @@ struct Student: Identifiable {
     var id: UUID = UUID()
     var name: String
     var responsible: [String]
-    var adress: String
+    var address: String
     var bornDate: Date
     var age: String
     var mainPhone: String
     var otherPhone: String
     var ingressDate: Date
     var foodRestrictions: [String]
-    var alergies: [String]
+    var allergies: [String]
     var bloodType: String
-    var preferedHospital: String
+    var preferredHospital: String
     var missingVacines: [String]
     var studentPhoto: UIImage
     var studentDiary: [Date: Diary]
@@ -32,7 +32,27 @@ class StudentList: ObservableObject {
     @Published var studentList: [Student]
     
     init(studentList: [Student]) {
-        self.studentList = studentList
+        self.studentList = [
+            Student(
+                id: UUID(),
+                name: "John Doe",
+                responsible: ["Parent 1", "Parent 2"],
+                address: "123 Main Street, City",
+                bornDate: Date(),
+                age: "18",
+                mainPhone: "123-456-7890",
+                otherPhone: "987-654-3210",
+                ingressDate: Date(),
+                foodRestrictions: ["No nuts", "Gluten-free"],
+                allergies: ["Pollen", "Cats"],
+                bloodType: "A+",
+                preferredHospital: "City General Hospital",
+                missingVacines: ["Flu", "HPV"],
+                studentPhoto: UIImage(),
+                studentDiary: [:],
+                studentClass: UUID()
+            )
+        ]
     }
 }
 
@@ -49,7 +69,15 @@ class ClassList: ObservableObject {
     @Published var classList: [Class]
     
     init(classList: [Class]) {
-        self.classList = classList
+        self.classList = [
+            Class(
+                className: "Math 101",
+                teachers: [UUID()],
+                students: [UUID()],
+                shift: "Morning",
+                activityDiary: [:]
+            )
+        ]
     }
 }
 
@@ -104,7 +132,24 @@ class AnnouncementList: ObservableObject {
     @Published var announcementList: [Announcement]
     
     init(announcementList: [Announcement]) {
-        self.announcementList = announcementList
+        self.announcementList = [
+            Announcement(
+                title: "Important Meeting",
+                description: "There will be an important meeting tomorrow.",
+                photo: UIImage(),
+                dateEvent: Date(),
+                writerId: UUID(),
+                type: .meetings
+            ),
+            Announcement(
+                title: "Annual School Event",
+                description: "Our annual school event is coming up!",
+                photo: UIImage(),
+                dateEvent: Date(),
+                writerId: UUID(),
+                type: .events
+            )
+        ]
     }
 }
 
@@ -119,7 +164,14 @@ class ActivityDiaryList: ObservableObject {
     @Published var activityList: [ActivityDiary]
     
     init(activityList: [ActivityDiary]) {
-        self.activityList = activityList
+        self.activityList = [
+            ActivityDiary(
+                date: Date(),
+                foodMenu: [],
+                activity: [],
+                classID: UUID()
+            )
+        ]
     }
 }
 
