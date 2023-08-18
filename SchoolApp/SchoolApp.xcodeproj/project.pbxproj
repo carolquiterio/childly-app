@@ -11,6 +11,8 @@
 		A7DFE7802A8E3BFF005A75FD /* ContentView.swift in Sources */ = {isa = PBXBuildFile; fileRef = A7DFE77F2A8E3BFF005A75FD /* ContentView.swift */; };
 		A7DFE7822A8E3C00005A75FD /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = A7DFE7812A8E3C00005A75FD /* Assets.xcassets */; };
 		A7DFE7852A8E3C00005A75FD /* Preview Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = A7DFE7842A8E3C00005A75FD /* Preview Assets.xcassets */; };
+		A7DFE78C2A8E6147005A75FD /* ActivitiesView.swift in Sources */ = {isa = PBXBuildFile; fileRef = A7DFE78B2A8E6147005A75FD /* ActivitiesView.swift */; };
+		D01595622A8E444E00E5A031 /* Data.swift in Sources */ = {isa = PBXBuildFile; fileRef = D01595612A8E444E00E5A031 /* Data.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -19,6 +21,8 @@
 		A7DFE77F2A8E3BFF005A75FD /* ContentView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ContentView.swift; sourceTree = "<group>"; };
 		A7DFE7812A8E3C00005A75FD /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
 		A7DFE7842A8E3C00005A75FD /* Preview Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = "Preview Assets.xcassets"; sourceTree = "<group>"; };
+		A7DFE78B2A8E6147005A75FD /* ActivitiesView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ActivitiesView.swift; sourceTree = "<group>"; };
+		D01595612A8E444E00E5A031 /* Data.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Data.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -55,6 +59,8 @@
 				A7DFE77F2A8E3BFF005A75FD /* ContentView.swift */,
 				A7DFE7812A8E3C00005A75FD /* Assets.xcassets */,
 				A7DFE7832A8E3C00005A75FD /* Preview Content */,
+				D01595612A8E444E00E5A031 /* Data.swift */,
+				A7DFE78B2A8E6147005A75FD /* ActivitiesView.swift */,
 			);
 			path = SchoolApp;
 			sourceTree = "<group>";
@@ -139,6 +145,7 @@
 			files = (
 				A7DFE7802A8E3BFF005A75FD /* ContentView.swift in Sources */,
 				A7DFE77E2A8E3BFF005A75FD /* SchoolAppApp.swift in Sources */,
+				A7DFE78C2A8E6147005A75FD /* ActivitiesView.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
